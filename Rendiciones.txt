@@ -1,0 +1,12 @@
+
+select NroCaja, sum (importe) from POS_Auditoria where 
+fecha = '08-01-2024' and tipo in ('pago', 'vuelto')
+group by NroCaja
+
+SELECT SUM(IMPORTE)
+FROM POS_AUDITORIA 
+WHERE Fecha = '2024-01-18'
+AND TIPO IN ('PAGO','VUELTO')
+AND TIPO NOT IN ('CB','CA')
+GROUP BY NroCaja
+ORDER BY NroCaja
