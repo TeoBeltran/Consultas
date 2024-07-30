@@ -13,49 +13,49 @@ select * into ConfigFacturacion_ from ConfigFacturacion
 */
 
 
-declare @PrimerComp int set @PrimerComp=28993 --DEFINE EL PRIMER COMPROBANTE A BORRAR
-declare @UltimoComp int set @UltimoComp=99999 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
-declare @PuntoVenta int set @UltimoComp=99999 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
-declare @ProxFactura int set @UltimoComp=99999 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
+declare @PrimerComp int set @PrimerComp=528326 --DEFINE EL PRIMER COMPROBANTE A BORRAR
+declare @UltimoComp int set @UltimoComp=528326 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
+declare @PuntoVenta int set @PuntoVenta=2 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
+declare @ProxFactura int set @ProxFactura=528326 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
 --
 
---update ConfigFacturacion set ProximaFacturaA = @ProxFactura where PuntoVenta = @PuntoVenta
+--update ConfigFacturacion set ProximaFacturaA = 528326 where PuntoVenta = 2
 Select * from ConfigFacturacion where PuntoVenta = @PuntoVenta
 
 
 select * from comprobantes 
 --delete comprobantes 
-where Numero between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where Numero between 528326 and 528326 and PuntoVenta = 2
 
 
 select * from comprobantesDetalle 
 --delete comprobantesDetalle 
-where Numero between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where Numero between 528326 and 528326 and PuntoVenta = 2
 
 
 select * from comprobantesImpuestos 
 --delete comprobantesImpuestos 
-where Numero between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where Numero between 528326 and 528326 and PuntoVenta = 2
 
 
 select * from comprobantesMediosPagos 
 --delete comprobantesMediosPagos 
-where Numero between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
 
 
 select * from C_Deudas
 --Delete C_Deudas
-where NroCbte between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
 
 
 select * from C_Pagos
 --Delete C_Pagos
-where NroCbte between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
 
 
 select * from Asientos 
 --delete Asientos
-where NroCbte between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
 
 
 select * from AsientosDetalle 
@@ -65,7 +65,7 @@ where Asiento in (560532)
 
 select * from Caja
 --delete Caja
-where NroCbte between @PrimerComp and @UltimoComp and PuntoVenta = @PuntoVenta
+where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
 
 
 select * from CajaMovimientos
