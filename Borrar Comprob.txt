@@ -13,7 +13,7 @@ select * into ConfigFacturacion_ from ConfigFacturacion
 */
 
 
---update ConfigFacturacion set ProximaFacturaA = 528326 where PuntoVenta = 2
+--update ConfigFacturacion set ProximaFacturaA = 543340 where PuntoVenta = 2
 Select * from ConfigFacturacion where PuntoVenta = 2
 
 
