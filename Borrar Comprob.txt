@@ -13,49 +13,43 @@ select * into ConfigFacturacion_ from ConfigFacturacion
 */
 
 
-declare @PrimerComp int set @PrimerComp=528326 --DEFINE EL PRIMER COMPROBANTE A BORRAR
-declare @UltimoComp int set @UltimoComp=528326 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
-declare @PuntoVenta int set @PuntoVenta=2 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
-declare @ProxFactura int set @ProxFactura=528326 --DEFINE EL ULTIMO COMPROBANTE A BORRAR
---
-
 --update ConfigFacturacion set ProximaFacturaA = 528326 where PuntoVenta = 2
-Select * from ConfigFacturacion where PuntoVenta = @PuntoVenta
+Select * from ConfigFacturacion where PuntoVenta = 2
 
 
 select * from comprobantes 
 --delete comprobantes 
-where Numero between 528326 and 528326 and PuntoVenta = 2
+where Numero between 99999 and 99999 and PuntoVenta = 2 and Tipo = 'FB'
 
 
 select * from comprobantesDetalle 
 --delete comprobantesDetalle 
-where Numero between 528326 and 528326 and PuntoVenta = 2
+where Numero between 99999 and 99999 and PuntoVenta = 2 and Tipo = 'FB'
 
 
 select * from comprobantesImpuestos 
 --delete comprobantesImpuestos 
-where Numero between 528326 and 528326 and PuntoVenta = 2
+where Numero between 99999 and 99999 and PuntoVenta = 2 and Tipo = 'FB'
 
 
 select * from comprobantesMediosPagos 
 --delete comprobantesMediosPagos 
-where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
+where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
 
 
 select * from C_Deudas
 --Delete C_Deudas
-where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
+where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
 
 
 select * from C_Pagos
 --Delete C_Pagos
-where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
+where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
 
 
 select * from Asientos 
 --delete Asientos
-where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
+where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
 
 
 select * from AsientosDetalle 
@@ -65,10 +59,9 @@ where Asiento in (560532)
 
 select * from Caja
 --delete Caja
-where NroCbte between @PrimerComp and @UltimoComp and PV = @PuntoVenta
+where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
 
 
 select * from CajaMovimientos
 --delete CajaMovimientos
 where NroMovimiento in ()
-
