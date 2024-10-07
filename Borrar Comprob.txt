@@ -19,37 +19,37 @@ Select * from ConfigFacturacion where PuntoVenta = 2
 
 select * from comprobantes 
 --delete comprobantes 
-where Numero between 99999 and 99999 and PuntoVenta = 2 and Tipo = 'FB'
+where Numero between 543340 and 543340 and PuntoVenta = 2 and Tipo = 'FA'
 
 
 select * from comprobantesDetalle 
 --delete comprobantesDetalle 
-where Numero between 99999 and 99999 and PuntoVenta = 2 and Tipo = 'FB'
+where Numero between 543340 and 543340 and PuntoVenta = 2 and Tipo = 'FA'
 
 
 select * from comprobantesImpuestos 
 --delete comprobantesImpuestos 
-where Numero between 99999 and 99999 and PuntoVenta = 2 and Tipo = 'FB'
+where Numero between 543340 and 543340 and PuntoVenta = 2 and Tipo = 'FA'
 
 
 select * from comprobantesMediosPagos 
 --delete comprobantesMediosPagos 
-where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
+where NroCbte between 543340 and 543340 and PV = 2 and TipoCbte = 'FA'
 
 
 select * from C_Deudas
 --Delete C_Deudas
-where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
+where NroCbte between 543340 and 543340 and PV = 2 and TipoCbte = 'FA'
 
 
 select * from C_Pagos
 --Delete C_Pagos
-where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
+where NroCbte between 543340 and 543340 and PV = 2 and TipoCbte = 'FA'
 
 
 select * from Asientos 
 --delete Asientos
-where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
+where NroCbte between 543340 and 543340 and PV = 2 and TipoCbte = 'FA'
 
 
 select * from AsientosDetalle 
@@ -59,7 +59,7 @@ where Asiento in (560532)
 
 select * from Caja
 --delete Caja
-where NroCbte between 99999 and 99999 and PV = 2 and TipoCbte = 'FB'
+where NroCbte between 543340 and 543340 and PV = 2 and TipoCbte = 'FA'
 
 
 select * from CajaMovimientos
