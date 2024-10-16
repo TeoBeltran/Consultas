@@ -44,3 +44,33 @@ where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoC
 
 
 
+
+---------------------------------------------------------------------------------------------------
+
+update Comprobantes set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
+
+update ComprobantesDetalle set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
+
+update ComprobantesImpuestos set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
+
+update ComprobantesMediosPagos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where PV = @pv and TipoCbte= @tipo and NroCbte Between @PrimerComp and @UltimoComp
+
+update C_Deudas set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+
+update C_Pagos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+
+update Caja set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+
+update Asientos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
+where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+
+
+
+
