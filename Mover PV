@@ -48,28 +48,28 @@ where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoC
 ---------------------------------------------------------------------------------------------------
 
 update Comprobantes set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
+where PuntoVenta = @pv and Tipo= @tipo and Numero >= @UltimoComp +1
 
 update ComprobantesDetalle set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
+where PuntoVenta = @pv and Tipo= @tipo and Numero = @UltimoComp +1
 
 update ComprobantesImpuestos set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
+where PuntoVenta = @pv and Tipo= @tipo and Numero = @UltimoComp +1
 
 update ComprobantesMediosPagos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where PV = @pv and TipoCbte= @tipo and NroCbte Between @PrimerComp and @UltimoComp
+where PV = @pv and TipoCbte= @tipo and NroCbte = @UltimoComp +1
 
 update C_Deudas set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+where Pv = @pv and TipoCbte = @tipo and NroCbte = @UltimoComp +1
 
 update C_Pagos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+where Pv = @pv and TipoCbte = @tipo and NroCbte = @UltimoComp +1
 
 update Caja set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+where Pv = @pv and TipoCbte = @tipo and NroCbte = @UltimoComp +1
 
 update Asientos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
-where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
+where Pv = @pv and TipoCbte = @tipo and NroCbte = @UltimoComp +1
 
 
 
