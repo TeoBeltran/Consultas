@@ -1,6 +1,6 @@
 /*
 Select * into ComprobantesImpuestos_MDA from ComprobantesImpuestos
-Select * into ComprobantesDetalle_MDA ComprobantesDetalle
+Select * into ComprobantesDetalle_MDA from ComprobantesDetalle
 Select * into Comprobantes_MDA from Comprobantes
 Select * into Caja_MDA from Caja
 */
