@@ -1,3 +1,10 @@
+/*
+Select * into ComprobantesImpuestos_MDA from ComprobantesImpuestos
+Select * into ComprobantesDetalle_MDA ComprobantesDetalle
+Select * into Comprobantes_MDA from Comprobantes
+Select * into Caja_MDA from Caja
+*/
+
 declare @pv int set @pv=35
 declare @tipo nvarchar(2) set @tipo='TB'
 
@@ -31,7 +38,7 @@ and comprobantes.Fecha = ci.Fecha
 where comprobantes.PuntoVenta = @pv and CAE= '' and comprobantes.Tipo = @tipo
 and Comprobantes.Fecha <= @fecha -10
 
-update comprobantesdetalle 
+update ComprobantesDetalle 
 set fecha = @fecha-10 
 from Comprobantes
 inner join ComprobantesDetalle cd
