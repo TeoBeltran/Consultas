@@ -2,22 +2,22 @@
 
 --BKP
 
-SELECT * INTO Comprobantes_19112024 FROM Comprobantes
-SELECT * INTO ComprobantesDetalle_19112024 FROM ComprobantesDetalle
-SELECT * INTO ComprobantesmImpuestos_19112024 FROM ComprobantesImpuestos
-SELECT * INTO ComprobantesMediosPagos_19112024 FROM ComprobantesMediosPagos
-SELECT * INTO Caja_19112024 FROM Caja
-SELECT * INTO C_Deudas_19112024 FROM C_Deudas
-SELECT * INTO C_Pagos_19112024 FROM C_Pagos
-SELECT * INTO Asientos_19112024 From Asientos
-SELECT * INTO AsientosDetalle_19112024 From AsientosDetalle
+SELECT * INTO Comprobantes_27122024 FROM Comprobantes
+SELECT * INTO ComprobantesDetalle_27122024 FROM ComprobantesDetalle
+SELECT * INTO ComprobantesmImpuestos_27122024 FROM ComprobantesImpuestos
+SELECT * INTO ComprobantesMediosPagos_27122024 FROM ComprobantesMediosPagos
+SELECT * INTO Caja_27122024 FROM Caja
+SELECT * INTO C_Deudas_27122024 FROM C_Deudas
+SELECT * INTO C_Pagos_27122024 FROM C_Pagos
+SELECT * INTO Asientos_27122024 From Asientos
+SELECT * INTO AsientosDetalle_27122024 From AsientosDetalle
 
 ---------------------------------------------------------------------------------------------------
 
 declare @pv int set @pv=15 --DEFINE PUNTO DE VENTA
 declare @tipo nvarchar(2) set @tipo='FB' --DEFINE TIPO
-declare @PrimerComp int set @PrimerComp=28673 --DEFINE EL PRIMER COMPROBANTE A MOVER 
-declare @UltimoComp int set @UltimoComp=28680 --DEFINE EL ULTIMO COMPROBANTE A MOVER 
+declare @PrimerComp int set @PrimerComp=11111 --DEFINE EL PRIMER COMPROBANTE A MOVER 
+declare @UltimoComp int set @UltimoComp=99999 --DEFINE EL ULTIMO COMPROBANTE A MOVER 
 declare @NroAjuste int set @NroAjuste=1 --DEFINE EL NUMERO QUE RESTA PARA AJUSTAR
 ---------------------------------------------------------------------------------------------------
 update  Comprobantes 
