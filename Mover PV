@@ -4,6 +4,7 @@ SELECT * INTO ComprobantesDetalle_16102024 FROM ComprobantesDetalle
 SELECT * INTO ComprobantesmImpuestos_16102024 FROM ComprobantesImpuestos
 SELECT * INTO ComprobantesMediosPagos_16102024 FROM ComprobantesMediosPagos
 SELECT * INTO Caja_16102024 FROM Caja
+SELECT * INTO CajaMovimientos_16122024 from CajaMovimientos
 SELECT * INTO C_Deudas_16102024 FROM C_Deudas
 SELECT * INTO C_Pagos_16102024 FROM C_Pagos
 SELECT * INTO Asientos_16102024 From Asientos
