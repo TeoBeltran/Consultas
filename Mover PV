@@ -1,14 +1,14 @@
 --BKP
-SELECT * INTO Comprobantes_16102024 FROM Comprobantes
-SELECT * INTO ComprobantesDetalle_16102024 FROM ComprobantesDetalle
-SELECT * INTO ComprobantesmImpuestos_16102024 FROM ComprobantesImpuestos
-SELECT * INTO ComprobantesMediosPagos_16102024 FROM ComprobantesMediosPagos
-SELECT * INTO Caja_16102024 FROM Caja
-SELECT * INTO CajaMovimientos_16102024 from CajaMovimientos
-SELECT * INTO C_Deudas_16102024 FROM C_Deudas
-SELECT * INTO C_Pagos_16102024 FROM C_Pagos
-SELECT * INTO Asientos_16102024 From Asientos
-SELECT * INTO AsientosDetalle_16102024 From AsientosDetalle
+SELECT * INTO Comprobantes_07032025 FROM Comprobantes
+SELECT * INTO ComprobantesDetalle_07032025 FROM ComprobantesDetalle
+SELECT * INTO ComprobantesmImpuestos_07032025 FROM ComprobantesImpuestos
+SELECT * INTO ComprobantesMediosPagos_07032025 FROM ComprobantesMediosPagos
+SELECT * INTO Caja_07032025 FROM Caja
+SELECT * INTO CajaMovimientos_07032025 from CajaMovimientos
+SELECT * INTO C_Deudas_07032025 FROM C_Deudas
+SELECT * INTO C_Pagos_07032025 FROM C_Pagos
+SELECT * INTO Asientos_07032025 From Asientos
+SELECT * INTO AsientosDetalle_07032025 From AsientosDetalle
 
 ---------------------------------------------------------------------------------------------------
 declare @pv int set @pv=9 --DEFINE PUNTO DE VENTA
