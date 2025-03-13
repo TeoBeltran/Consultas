@@ -2,15 +2,15 @@
 
 --BKP
 
-SELECT * INTO Comprobantes_27122024 FROM Comprobantes
-SELECT * INTO ComprobantesDetalle_27122024 FROM ComprobantesDetalle
-SELECT * INTO ComprobantesmImpuestos_27122024 FROM ComprobantesImpuestos
-SELECT * INTO ComprobantesMediosPagos_27122024 FROM ComprobantesMediosPagos
-SELECT * INTO Caja_27122024 FROM Caja
-SELECT * INTO C_Deudas_27122024 FROM C_Deudas
-SELECT * INTO C_Pagos_27122024 FROM C_Pagos
-SELECT * INTO Asientos_27122024 From Asientos
-SELECT * INTO AsientosDetalle_27122024 From AsientosDetalle
+SELECT * INTO Comprobantes_13032025 FROM Comprobantes
+SELECT * INTO ComprobantesDetalle_13032025 FROM ComprobantesDetalle
+SELECT * INTO ComprobantesmImpuestos_13032025 FROM ComprobantesImpuestos
+SELECT * INTO ComprobantesMediosPagos_13032025 FROM ComprobantesMediosPagos
+SELECT * INTO Caja_13032025 FROM Caja
+SELECT * INTO C_Deudas_13032025 FROM C_Deudas
+SELECT * INTO C_Pagos_13032025 FROM C_Pagos
+SELECT * INTO Asientos_13032025 From Asientos
+SELECT * INTO AsientosDetalle_13032025 From AsientosDetalle
 
 ---------------------------------------------------------------------------------------------------
 
