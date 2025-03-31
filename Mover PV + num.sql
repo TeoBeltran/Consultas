@@ -10,14 +10,15 @@ SELECT * INTO C_Pagos_07032025 FROM C_Pagos
 SELECT * INTO Asientos_07032025 From Asientos
 SELECT * INTO AsientosDetalle_07032025 From AsientosDetalle
 
----------------------------------------------------------------------------------------------------
-declare @pv int set @pv=9 --DEFINE PUNTO DE VENTA
-declare @tipo nvarchar(2) set @tipo='TB' --DEFINE TIPO
-declare @PrimerComp int set @PrimerComp=2714 --DEFINE EL PRIMER COMPROBANTE A MOVER 
-declare @UltimoComp int set @UltimoComp=6650 --DEFINE EL ULTIMO COMPROBANTE A MOVER 
---declare @NroAjuste int set @NroAjuste=1 --DEFINE EL NUMERO QUE RESTA PARA AJUSTAR
+--VARIABLES----------------------------------------------------------------------------------------
+declare @pv int set @pv=9 --Define Punto de Venta
+declare @tipo nvarchar(2) set @tipo='TB' --Define TipoCbte
+declare @PrimerComp int set @PrimerComp=2714 --Define el primer Comprobante a mover
+declare @UltimoComp int set @UltimoComp=6650 --Define el último Comprobante a mover
+--Si no se mueve la totalidad de los Cbtes, genera un espacio vacío que se moverá con la última consulta
 ---------------------------------------------------------------------------------------------------
 
+--MOVER PV
 update  Comprobantes set PuntoVenta = 1009, PuntoVentaTMP = 1009
 where PuntoVenta = @pv and Tipo= @tipo and Numero Between @PrimerComp and @UltimoComp
 
@@ -45,8 +46,8 @@ where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoC
 
 
 
-
 ---------------------------------------------------------------------------------------------------
+--MOVER NUMERACION---------------------------------------------------------------------------------
 
 update Comprobantes set Numero = Numero - ( ( @UltimoComp - @PrimerComp ) + 1 )
 where PuntoVenta = @pv and Tipo= @tipo and Numero >= @UltimoComp +1
