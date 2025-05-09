@@ -1,5 +1,5 @@
 DECLARE @Fecha smalldatetime 
-SET @Fecha = '10/11/2024'
+SET @Fecha = '10/05/2025'
 DECLARE @NroCaja integer
 SET @NroCaja = 10
 
