@@ -1,7 +1,3 @@
-
-
---BKP
-
 SELECT * INTO Comprobantes_13032025 FROM Comprobantes
 SELECT * INTO ComprobantesDetalle_13032025 FROM ComprobantesDetalle
 SELECT * INTO ComprobantesmImpuestos_13032025 FROM ComprobantesImpuestos
@@ -11,7 +7,6 @@ SELECT * INTO C_Deudas_13032025 FROM C_Deudas
 SELECT * INTO C_Pagos_13032025 FROM C_Pagos
 SELECT * INTO Asientos_13032025 From Asientos
 SELECT * INTO AsientosDetalle_13032025 From AsientosDetalle
-
 ---------------------------------------------------------------------------------------------------
 
 declare @pv int set @pv=15 --DEFINE PUNTO DE VENTA
@@ -39,11 +34,10 @@ where PV = @pv and TipoCbte= @tipo and NroCbte Between @PrimerComp and @UltimoCo
 update  C_Deudas
 set nrocbte = nrocbte -@NroAjuste
 where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
----------------------------------------------------------------------------------------------------
+
 update  C_Pagos
 set nrocbte = nrocbte -@NroAjuste
 where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
-
 ---------------------------------------------------------------------------------------------------
 update  Caja 
 set nrocbte = nrocbte -@NroAjuste
@@ -52,8 +46,4 @@ where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoC
 update  Asientos 
 set nrocbte = nrocbte -@NroAjuste
 where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
-
-
-
-
 
