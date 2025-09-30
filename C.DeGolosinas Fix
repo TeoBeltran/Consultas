@@ -1,0 +1,13 @@
+UPDATE Comprobantes
+SET Comprobantes.Zeta = Zetas.Numero
+FROM Comprobantes
+JOIN Zetas ON Comprobantes.Fecha = Zetas.Fecha
+where comprobantes.fecha >= '31-07-2025'
+
+
+UPDATE ComprobantesImpuestos
+SET ComprobantesImpuestos.Zeta = Zetas.Numero
+FROM ComprobantesImpuestos
+JOIN Zetas ON ComprobantesImpuestos.Fecha = Zetas.Fecha
+where ComprobantesImpuestos.fecha >= '31-07-2025'
+
