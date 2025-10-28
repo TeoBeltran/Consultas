@@ -1,0 +1,20 @@
+DECLARE @table SYSNAME = 'colRemitosArticulos';
+DECLARE @sql NVARCHAR(MAX) = '';
+
+SELECT @sql = @sql + 
+    CASE WHEN @sql = '' THEN '' ELSE ' OR ' END +
+    QUOTENAME(name) + ' IS NULL'
+FROM sys.columns
+WHERE object_id = OBJECT_ID(@table);
+
+IF @sql = ''
+BEGIN
+    PRINT 'La tabla no existe o no tiene columnas.';
+    RETURN;
+END
+
+SET @sql = 'SELECT * FROM ' + QUOTENAME(@table) + ' WHERE ' + @sql;
+
+PRINT @sql;
+EXEC sp_executesql @sql;
+
