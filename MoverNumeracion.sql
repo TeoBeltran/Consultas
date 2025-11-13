@@ -47,3 +47,6 @@ update  Asientos
 set nrocbte = nrocbte -@NroAjuste
 where Pv = @pv and TipoCbte = @tipo and NroCbte Between @PrimerComp and @UltimoComp
 
+
+
+--
