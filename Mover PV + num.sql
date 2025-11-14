@@ -1,7 +1,7 @@
 --BKP
 SELECT * INTO Comprobantes_10072025 FROM Comprobantes
 SELECT * INTO ComprobantesDetalle_10072025 FROM ComprobantesDetalle
-SELECT * INTO ComprobantesmImpuestos_10072025 FROM ComprobantesImpuestos
+SELECT * INTO ComprobantesImpuestos_10072025 FROM ComprobantesImpuestos
 SELECT * INTO ComprobantesMediosPagos_10072025 FROM ComprobantesMediosPagos
 SELECT * INTO Caja_10072025 FROM Caja
 SELECT * INTO CajaMovimientos_10072025 from CajaMovimientos
