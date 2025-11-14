@@ -1,6 +1,6 @@
 SELECT * INTO Comprobantes_13032025 FROM Comprobantes
 SELECT * INTO ComprobantesDetalle_13032025 FROM ComprobantesDetalle
-SELECT * INTO ComprobantesmImpuestos_13032025 FROM ComprobantesImpuestos
+SELECT * INTO ComprobantesImpuestos_13032025 FROM ComprobantesImpuestos
 SELECT * INTO ComprobantesMediosPagos_13032025 FROM ComprobantesMediosPagos
 SELECT * INTO Caja_13032025 FROM Caja
 SELECT * INTO C_Deudas_13032025 FROM C_Deudas
