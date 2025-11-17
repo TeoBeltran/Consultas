@@ -1,0 +1,20 @@
+WITH Numeros AS (
+    SELECT 6600 AS numero
+    UNION ALL
+    SELECT numero + 1
+    FROM Numeros
+    WHERE numero + 1 <= 8187
+),
+Existentes AS (
+    SELECT numero
+    FROM comprobantes
+    WHERE puntoventa = 4
+      AND tipo = 'tb'
+      AND numero BETWEEN 6600 AND 8187
+)
+SELECT n.numero AS Saltea
+FROM Numeros n
+LEFT JOIN Existentes e ON n.numero = e.numero
+WHERE e.numero IS NULL
+ORDER BY n.numero
+OPTION (MAXRECURSION 0);
