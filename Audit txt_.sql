@@ -1,7 +1,7 @@
 DECLARE @Fecha smalldatetime 
-SET @Fecha = '10/05/2025'
+SET @Fecha = '10/01/2026'
 DECLARE @NroCaja integer
-SET @NroCaja = 10
+SET @NroCaja = 1
 
 SELECT   CASE WHEN Tipo = 'SUPERV' THEN
                    'SUP ' +
