@@ -1,14 +1,14 @@
 --BKP
-SELECT * INTO Comprobantes_10072025 FROM Comprobantes
-SELECT * INTO ComprobantesDetalle_10072025 FROM ComprobantesDetalle
-SELECT * INTO ComprobantesImpuestos_10072025 FROM ComprobantesImpuestos
-SELECT * INTO ComprobantesMediosPagos_10072025 FROM ComprobantesMediosPagos
-SELECT * INTO Caja_10072025 FROM Caja
-SELECT * INTO CajaMovimientos_10072025 from CajaMovimientos
-SELECT * INTO C_Deudas_10072025 FROM C_Deudas
-SELECT * INTO C_Pagos_10072025 FROM C_Pagos
-SELECT * INTO Asientos_10072025 From Asientos
-SELECT * INTO AsientosDetalle_10072025 From AsientosDetalle
+SELECT * INTO Comprobantes_18032026 FROM Comprobantes
+SELECT * INTO ComprobantesDetalle_18032026 FROM ComprobantesDetalle
+SELECT * INTO ComprobantesImpuestos_18032026 FROM ComprobantesImpuestos
+SELECT * INTO ComprobantesMediosPagos_18032026 FROM ComprobantesMediosPagos
+SELECT * INTO Caja_18032026 FROM Caja
+SELECT * INTO CajaMovimientos_18032026 from CajaMovimientos
+SELECT * INTO C_Deudas_18032026 FROM C_Deudas
+SELECT * INTO C_Pagos_18032026 FROM C_Pagos
+SELECT * INTO Asientos_18032026 From Asientos
+SELECT * INTO AsientosDetalle_18032026 From AsientosDetalle
 
 --VARIABLES----------------------------------------------------------------------------------------
 declare @pv int set @pv=9 --Define Punto de Venta
@@ -72,7 +72,6 @@ where Pv = @pv and TipoCbte = @tipo and NroCbte = @UltimoComp + 1
 
 update Asientos set NroCbte = NroCbte - ( ( @UltimoComp - @PrimerComp ) + 1 )
 where Pv = @pv and TipoCbte = @tipo and NroCbte = @UltimoComp + 1
-
 
 
 
